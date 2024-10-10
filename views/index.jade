@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  <form action="movies/create" method="post" enctype="multipart/form-data">
+  input(type="text" name="name")
+  input(type="text" name="describe")
+  input(type="text" name="trailer")
+  input(type="text" name="cens")
+  input(type="text" name="genres")
+  input(type="datetime-local" name="releases")
+  input(type="datetime-local" name="duration")
+  input(type="text" name="country")
+  input(type="text" name="director")
+  input(type="text" name="producer")
+  input(type="text" name="actor")
+  //- input(type="text" name="pass")
+  <input type="file" name="poster" />
+  <input type="file" name="backdrop" />
+  button asd
+</form>
