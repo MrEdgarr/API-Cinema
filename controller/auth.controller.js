@@ -4,8 +4,8 @@ const jwt = require("jsonwebtoken");
 const SELECT_SQL =
   "users.id, users.username, users.password, users.email, users.phone, users.role, " +
   "DATE_FORMAT( CONVERT_TZ(FROM_UNIXTIME(users.last_logged_at), @@session.time_zone, '+07:00'), '%H:%i:%s %d/%m/%Y') as last_logged_at," +
-  "DATE_FORMAT( CONVERT_TZ(FROM_UNIXTIME(users.update_at), @@session.time_zone, '+07:00'), '%H:%i:%s %d/%m/%Y') as update_at," +
-  "DATE_FORMAT( CONVERT_TZ(FROM_UNIXTIME(users.create_at), @@session.time_zone, '+07:00'), '%H:%i:%s %d/%m/%Y') as create_at";
+  "DATE_FORMAT( CONVERT_TZ(FROM_UNIXTIME(users.updated_at), @@session.time_zone, '+07:00'), '%H:%i:%s %d/%m/%Y') as updated_at," +
+  "DATE_FORMAT( CONVERT_TZ(FROM_UNIXTIME(users.created_at), @@session.time_zone, '+07:00'), '%H:%i:%s %d/%m/%Y') as created_at";
 const usersController = {
   // ----------------------------------- LOGIN USER -----------------------------------
   login: async (req, res) => {

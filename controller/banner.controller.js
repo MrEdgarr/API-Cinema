@@ -9,7 +9,7 @@ const bannerController = {
       if (!rows) {
         return res.status(404).send({
           success: false,
-          message: "Không tìm thấy dữ liệu",
+          message: "Error in Get All API",
         });
       }
       //  STATUS 200
