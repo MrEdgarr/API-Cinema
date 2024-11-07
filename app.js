@@ -13,11 +13,9 @@ var bannerRouter = require("./routes/banner.routes");
 var filmRouter = require("./routes/film.routes");
 var bookingsRouter = require("./routes/booking.routes");
 var booking_detailRouter = require("./routes/booking_detail.routes");
-var cinemaRouter = require("./routes/cinema.routes");
-var cityRouter = require("./routes/city.routes");
-var roomRouter = require("./routes/room.routes");
+
 var scheduleRouter = require("./routes/schedule.routes");
-var seatRouter = require("./routes/seat.routes");
+
 var ticketRouter = require("./routes/ticket.routes");
 
 var app = express();
@@ -54,11 +52,7 @@ app.use("/banner", bannerRouter);
 app.use("/movies", filmRouter);
 app.use("/bookings", bookingsRouter);
 app.use("/booking_detail", booking_detailRouter);
-app.use("/cinemas", cinemaRouter);
-app.use("/citys", cityRouter);
-app.use("/rooms", roomRouter);
 app.use("/schedules", scheduleRouter);
-app.use("/seats", seatRouter);
 app.use("/tickets", ticketRouter);
 
 // Tao duong dan cho image

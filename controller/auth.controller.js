@@ -169,7 +169,7 @@ const usersController = {
 
             // ----------------------------------- QUERY SQL -----------------------------------
             const sql =
-                "INSERT INTO `users`(`username`, `password`, `email`,  `phone`, `created_at`) VALUES (?,?,?,?, unix_timestamp(NOW()))";
+                "INSERT INTO `users`(`username`, `password`, `email`,  `phone`, `role`,  `created_at`) VALUES (?,?,?,?,0, unix_timestamp(NOW()))";
             const [rows, fields] = await pool.query(sql, [
                 username,
                 password,
